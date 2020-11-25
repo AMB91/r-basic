@@ -1,0 +1,99 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\usepackage[normalem]{ulem}
+% Avoid problems with \sout in headers with hyperref
+\pdfstringdefDisableCommands{\renewcommand{\sout}{}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+Plain text End a line with two spaces to start a new paragraph.
+\emph{italics} and \emph{italics} \textbf{bold} and \textbf{bold}
+superscript\textsuperscript{2} \sout{strikethrough}
+\href{www.rstudio.com}{link} \# Header 1 \#\# Header 2 \#\#\# Header 3
+\#\#\#\# Header 4 \#\#\#\#\# Header 5 \#\#\#\#\#\# Header 6 endash: --
+emdash: --- ellipsis: \ldots{} inline equation: \(A = \pi*r^{2}\) image:
+\includegraphics{path/to/smallorb.png}
+
+horizontal rule (or slide break): **\emph{ \textgreater{} block quote }
+unordered list * item 2 + sub-item 1 + sub-item 2
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  ordered list
+\item
+  item 2
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  sub-item 1
+\item
+  sub-item 2 Table Header \textbar{} Second Header -------------
+  \textbar{} ------------- Table Cell \textbar{} Cell 2 Cell 3
+  \textbar{} Cell 4
+\end{itemize}
+
+\end{document}
