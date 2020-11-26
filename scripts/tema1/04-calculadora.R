@@ -67,11 +67,15 @@ factorial(7)
 
 factorial(4)
 
+factorial(-3)
+
 factorial(0)
 
 choose(5, 3)
 
 choose(3,5)
+
+choose(6,2)
 
 log(4^6, 4)
 
@@ -79,9 +83,14 @@ log(4^6, 4)
 
 choose(5,2)
 
+sin(pi/2)
+sin(90/180*pi)
+
 sin(60*pi/180)
 
+cos(60) #está mal. Se tiene que pasar a radianes
 cos(60*pi/180)
+?sin
 
 sinpi(1/2) # = sin (pi/2)
 
@@ -96,6 +105,13 @@ asin(0.8660254) * 180 /pi #arc sin en grados
 asin(5) #arc sin x in [-1,1]
 
 acos(-8)
+
+x = seq(0,2*pi,0.1)
+plot(x,sin(x),type="l",col="blue",lwd=3, xlab=expression(x), ylab="")
+lines(x,cos(x),col="green",lwd=3)
+lines(x, tan(x), col="purple",lwd=3)
+legend("bottomleft",col=c("blue","green","purple"),
+       legend=c("Seno","Coseno", "Tangente"), lwd=3, bty="l")
 
 print(sqrt(2),10)
 round(sqrt(2), 3)
