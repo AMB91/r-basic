@@ -60,7 +60,7 @@ log(32, 2)
 
 log(32, base = 2)
 log(base=2, 32)
-
+?log
 abs(-pi)
 
 factorial(7)
@@ -119,6 +119,8 @@ floor(sqrt(2))
 ceiling(sqrt(2))
 trunc(sqrt(2))
 
+print(sqrt(2),10)
+
 sqrt(2)^2-2
 
 round(sqrt(2), 4)^2
@@ -127,6 +129,7 @@ round(sqrt(2), 4)^2
 print(2^50, 15)
 print(2^50, 2)
 print(pi, 22)
+# No pedir más de 16 dígitos a R porque se equivoca
 #3.141592653589793115998
 #3.141592653589793238462
 
@@ -136,7 +139,7 @@ round(sqrt(2),0)
 round(sqrt(2))
 
 round(digits = 5, sqrt(2))
-round(5, sqrt(2))
+round(5, sqrt(2)) #Redondeo de 2 a raiz cuadrada de 2. No tiene sentido. Se debe especificar.
 
 
 floor(-3.45)
@@ -153,25 +156,40 @@ y
 sin(pi/4) + cos(pi/4) -> z
 z
 
-edad <- 30
+# Utilizaremos indistintamente el = y la <- / -> pero hay que tenre en cuenta que con el = se entiende que la variable está a la izquierda y a la derecha el valor
+# La flecha siempre se dirige hacía la
 
-nombre = "Juan Gabriel"
+edad <- 29
+
+nombre = "Andres Magai"
 
 HOLA = 1
 hola = 5
 
 pi.4 = 4*pi
 pi.4
+pi5 = 5*pi
+pi5
 
 x = 2
 x = x^2
+x= x+2
 
 x = sqrt(x)
 
+miVariable=4
+doble = function(x){2*x}
+doble(miVariable)
+
+cuadrado = function(x){x^2}
+cuadrado(miVariable)
+
 ## Función f(x) = x^3 - (3^x)* sen(x)
-f = function(x) {
-  x^3 - (3^x) * sin(x)
-}
+f = function(x)
+f = function(x)  {
+  x^3 - (3^x) * sin (x)
+  }
+f(4)
 
 f(4) # 4^3 - 3^4 * sin(4)
 f(5)
@@ -207,6 +225,7 @@ suma5(3)
 ls()
 
 rm(product)
+
 
 ls()
 
