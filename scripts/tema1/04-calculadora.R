@@ -102,6 +102,8 @@ asin(0.8660254) #arc sin en radianes
 
 asin(0.8660254) * 180 /pi #arc sin en grados
 
+atan(4/3)*180/pi
+
 asin(5) #arc sin x in [-1,1]
 
 acos(-8)
@@ -231,6 +233,14 @@ ls()
 
 rm(list = ls())
 
+
+z <- 2+3i
+z2=complex(real=2, imaginary=-3)
+Re(z)
+Im(z)
+Conj(z2)
+
+3+2i
 class(3+2i)
 
 (3+2i)*5
@@ -243,10 +253,12 @@ class(3+2i)
 #2+7*i
 
 #pi + sqrt(2)i
+
 complex(real = pi, imaginary = sqrt(2)) -> z1
 z1
 
 sqrt(-5)
+
 sqrt(as.complex(-5))
 
 #La raíz cuadrada devuelve, de las dos soluciones la de
@@ -276,3 +288,10 @@ z2
 Mod(z2)
 Arg(z2)
 pi/2
+Mod(z1)
+Arg(z)
+
+
+print(atan(50),3)
+
+atan(50)
